@@ -6,11 +6,16 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Indie Flower', cursive;
 }
 
@@ -32,6 +37,11 @@ p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
+
+  @media @mobile {
+      line-height: 1.6;
+      font-size: 1.5rem;
+  }
 }
 
 img {
@@ -43,4 +53,21 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @mobile {
+      width: 100%;
+      padding: 0 25px;
+  }
+}
+
+body {
+  @media @mobile {
+      overflow: overlay;
+  }
+}
+
+img {
+  &:hover {
+      .imgAnimated(1s);
+}
 }
