@@ -1,35 +1,50 @@
-// Navigation Styles here
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 0;
-  border-bottom: @border-medium dashed lightgray;
+section {
+    &.navigation {
+        display: flex;
+        justify-content: space-between;
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 350px;
 
-  @media @mobile {
-    flex-direction: column;
-  }
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 1.6rem;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+
+        margin: 25px 0;
+
+        @media @mobile {
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0;
+			> *, > nav {
+                width: 100%;
+			}
+			text-align: center;
+
+			h1 {
+				font-size: 3rem;
+				margin: 20px 0;
+				margin-bottom: 5px;
+			}
+
+			a {
+				padding: 10px;
+			}
+		}
+    }
 }
 
-h1 {
-  width: 40%;
-  @media @mobile {
-    margin: 0 auto;
-  }
-}
-
-a {
-  color: black;
-  text-decoration: none;
+.borderb {
+    // padding-bottom: 10px;
+    border-bottom: 2px dashed grey;
 }
